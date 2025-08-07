@@ -12,6 +12,7 @@ resource "aws_instance" "web_server22" {
   private_ip                  = "10.0.10.13"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.web_sg.id]
+  availability_zone           = "us-east-1a"
     tags = {
     Name = "web_server22"
 }

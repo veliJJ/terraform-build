@@ -12,7 +12,7 @@ resource "aws_instance" "web_server22" {
   private_ip                  = "10.0.10.13"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.web_sg.id]
-  availability_zone           = "us-east-1e"
+  availability_zone           = "us-east-1a"
     tags = {
     Name = "web_server22"
 }
@@ -51,6 +51,7 @@ tags = {
 resource "aws_subnet" "my-subnet01" {
     vpc_id = aws_vpc.my-vpc.id
     cidr_block = "10.0.10.0/24"
+    availability_zone = "us-east-1a"
 
   tags = {
     Name = "my-subnet01"
